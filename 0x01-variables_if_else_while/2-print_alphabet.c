@@ -1,4 +1,10 @@
+/*
+ * File: 2-print_alphabet.c
+ * Auth: Mugaba Obed
+ */
+
 #include <stdio.h>
+
 /**
  * main - Prints the alphabet in lowercase.
  *
