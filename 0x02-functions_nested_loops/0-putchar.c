@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
-*main - function prints text as output
-*
-*Return:return 0
-*/
+ * main - this is a function
+ * Return: return 0
+ */
 int main(void)
 {
 _putchar('_');
@@ -20,5 +19,3 @@ _putchar('\n');
 return (0);
 
 }
-
-
