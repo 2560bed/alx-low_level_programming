@@ -1,30 +1,45 @@
 #include <stdio.h>
 /**
-* main _ The main function
-* 1 and 2, seperated by a comma
-* Return: 0.
+*main - prints out first 98
+*fibonacci suit numbers
+*Return: return 0
 */
 int main(void)
 {
-int count;
-unsigned long fib1 = 0, fib2 = 1, sum;
-unsigned long fib1_half1, fib2_half1, fib2_half2;
-unsigned long half1, half2;
-for (count = 0; count < 92; count++)
+int inc;
+unsigned long n1 = 0, n2 = 1, n3;
+unsigned long n1_h1, n1_h2, n2_h1, n2_h2;
+unsigned long h1, h2;
+
+for (inc = 0; inc < 92; inc++)
 {
-sum = fib1 + fib2;
-printf("%lu, ", sum);
-fib1 = fib2;
-fib2 = sum;
+n3 = n1 + n2;
+printf("%lu, ", n3);
+n1 = n2;
+n2 = n3;
 }
-fib1_half1 = fib1 / 10000000000;
-fib2_half1 = fib2 / 10000000000;
-fib1_half2 = fib1 % 10000000000;
-fib2_half2 = fib2 % 10000000000;
-for (count = 93; count < 99; count++)
+n1_h1 = n1 / 10000000000;
+n2_h1 = n2 / 10000000000;
+n1_h2 = n1 % 10000000000;
+n2_h2 = n2 % 10000000000;
+for (inc = 93; inc < 99; inc++)
 {
-half1 = fib1_half1 + fib2_half1;
-half2 = fib1_half2 + fib2_half2;
-if (fib1_half2 + fib2_half2 > 9999999999)
+h1 = n1_h1 + n2_h1;
+h2 = n1_h2 + n2_h2;
+if ((n1_h2 + n2_h2) > 9999999999)
 {
-half1 += 1;
+h1 += 1;
+h2 %= 10000000000;
+}
+printf("%lu%lu", h1, h2);
+if (inc != 98)
+printf(", ");
+
+n1_h1 = n2_h1;
+n1_h2 = n2_h2;
+n2_h1 = h1;
+n2_h2 = h2;
+}
+printf("\n");
+return (0);
+}
